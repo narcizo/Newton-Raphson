@@ -46,4 +46,5 @@ void main(){
     printf("\n");
     printf("\nprecisao = %.25Lf\n", precisao);
     printf("xk = %.30Lf\n", xk);
+    printf("end of program");
 }
