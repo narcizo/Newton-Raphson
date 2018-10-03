@@ -3,7 +3,6 @@
 #include<math.h>
 #include<string.h>
 
-
 long double ieee754(float input){
     int expoente;
     long double mantissa;
