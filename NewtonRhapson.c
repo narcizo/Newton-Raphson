@@ -14,7 +14,7 @@ long double ieee754(float input){
     printf("%.20Lf\n", mantissa);
     expoente += 1023; // bias 64bits
 
-    if(fmod(input, 2) != 0)
+    if (fmod(input, 2) != 0)
         mantissa /= 2;
 
     return mantissa;
@@ -29,7 +29,7 @@ void main(){
     scanf(" %Lf", &input);
     xk1 = ieee754(input);
     //xk1 = input/4 + 1;
-    do{
+    do {
         printf("***********************iteracao = %d\n", i++);
         xk = xk1;
         printf("Xk = %.20Lf\n", xk);
@@ -41,7 +41,7 @@ void main(){
         printf("Xk+1 = %.20Lf\n", xk1);
         erro = fabs(xk1 - xk);
         printf("erro = %.25Lf\n", erro);
-    }while(erro > precisao);
+    } while(erro > precisao);
 
     printf("\n");
     printf("\nprecisao = %.25Lf\n", precisao);
