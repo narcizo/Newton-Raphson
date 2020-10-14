@@ -28,6 +28,7 @@ void main(){
     scanf(" %Lf", &input);
     xk1 = ieee754(input);
     //xk1 = input/4 + 1;
+    //loop que controla o código
     do {
         printf("***********************iteracao = %d\n", i++);
         xk = xk1;
@@ -37,7 +38,6 @@ void main(){
         Dfxk = 2 * xk;
         printf("f'(Xk) = %.20Lf\n", Dfxk);
         xk1 = xk - fxk/Dfxk;
-        printf("pensei melhor e n precisa diminuir 1");
         printf("Xk+1 = %.20Lf\n", xk1);
         erro = fabs(xk1 - xk);
         printf("erro = %.25Lf\n", erro);
