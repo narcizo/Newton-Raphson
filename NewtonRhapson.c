@@ -36,7 +36,8 @@ void main(){
         printf("f(Xk) = %.20Lf\n", fxk);
         Dfxk = 2 * xk;
         printf("f'(Xk) = %.20Lf\n", Dfxk);
-        xk1 = xk - fxk/Dfxk;
+        //xk1 = xk - fxk/Dfxk;
+        xk1 = xk - fxk/Dfxk - 1;
         printf("Xk+1 = %.20Lf\n", xk1);
         erro = fabs(xk1 - xk);
         printf("erro = %.25Lf\n", erro);
@@ -45,5 +46,4 @@ void main(){
     printf("\n");
     printf("\nprecisao = %.25Lf\n", precisao);
     printf("xk = %.30Lf\n", xk);
-    printf("pr1 dollo\n");
 }
