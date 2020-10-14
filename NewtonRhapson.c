@@ -20,7 +20,7 @@ long double ieee754(float input){
 }
 
 void main(){
-    long double xk, fxk, Dfxk, xk1, erro, precisao;
+    long double xk, fxk, Dfxk, xk1, erro, precisao, Tfxk;
     long double input;
     int i = 0;
 
@@ -28,6 +28,7 @@ void main(){
     scanf(" %Lf", &input);
     xk1 = ieee754(input);
     //xk1 = input/4 + 1;
+    //loop que controla o código
     do {
         printf("***********************iteracao = %d\n", i++);
         xk = xk1;
@@ -36,9 +37,9 @@ void main(){
         printf("f(Xk) = %.20Lf\n", fxk);
         Dfxk = 2 * xk;
         printf("f'(Xk) = %.20Lf\n", Dfxk);
+        Tfxk = 3 * xk;
+        printf("f'(Xk) = %.20Lf\n", Tfxk);
         xk1 = xk - fxk/Dfxk;
-        //xk1 = xk - fxk/Dfxk - 1;
-        printf("se pa que tem que diminuir 1 do xk1");
         printf("Xk+1 = %.20Lf\n", xk1);
         erro = fabs(xk1 - xk);
         printf("erro = %.25Lf\n", erro);
