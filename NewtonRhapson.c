@@ -40,8 +40,6 @@ void main(){
         printf("Xk+1 = %.20Lf\n", xk1);
         erro = fabs(xk1 - xk);
         printf("erro = %.25Lf\n", erro);
-        
-        printf("absolutamente ratissimo mudando qualquer coisa atras de uma peita\n");
     } while(erro > precisao);
 
     printf("\n");
